@@ -1,0 +1,18 @@
+def convertfar(toc):                                #start of the celsuis to fahrenheit
+    tof = (9/5) * toc + 32                          #formula
+    print (tof)                                     #print final calculation
+
+def convertcel(tof):                                #start of the fahrenheit
+    toc = (5/9) * (tof - 32)                        #formula
+    print (toc)                                     #print final calculation
+
+print ("Enter a temperature: ")                     #asks for the temperature
+temp = float(input())                               #the answer above is gonna be set as a float (temp)
+print ('Convert to (F)ahrenheit or (C)elsuis?')     #askwhat type to convert
+name = str(input())                                 #the answer above is gonna be set as a str (name)
+
+if name == 'F':                                     #if answer is F then it goes to "def convertfar"
+    convertfar(temp)
+
+elif name == 'C':                                   #if answer is C then it goes to "def convertcel"
+    convertcel(temp)
