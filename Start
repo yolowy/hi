@@ -27,6 +27,8 @@ time.sleep(3)
 question = input("Would you like to play a game? [Y/N]")
 if question == "n":
     print ('oh... okay')
+    pygame.quit()
+    quit()
 
 if question == "y":
     time.sleep(2)
@@ -53,15 +55,3 @@ time.sleep(4)
 print ('Now that you have beaten my very first test, you only need 2 more challenges to beat me ')
 time.sleep(6)
 print ("What may the next test be? well good question because you'll be playing this... thing I found")
-
-
-
-print('WOW NOT BAD! ')
-time.sleep(2)
-print("I've had this game for so long and I never was able to finish it")
-time.sleep(2)
-print('now that you have finished 2 of my games... I have a riddle for you!')
-time.sleep(2)
-print('Here is the question! Solve this and you may pass!!')
-time.sleep(2)
-
