@@ -1,23 +1,28 @@
 import random
 import time
+import pygame
+pygame.init()
 
 number = random.randint(1,10)
 tries = 1
 
-print('You see a cave that looks erie and, but you see a sign and it says')
+print('You see a cave that looks erie and you see a sign and it says')
 time.sleep(3)
 print('Enter and you may get a chance to get a life time of fortune')
-time.sleep(3)
+time.sleep(2)
 
 question = input('DO YOU WANT TO ENTER?! [Y/N]')
 if question == "n":
     print ('Well you walk by and you encounter a big snake... and ate you... ')
     time.sleep(3)
     print ('THE END')
+    pygame.quit()
+    quit()
 
 if question == "y":
     uname = input('Hello, What is your username?')
 print('Hello', uname + '.',)
+time.sleep(3)
 
 question = input("Would you like to play a game? [Y/N]")
 if question == "n":
@@ -38,14 +43,25 @@ while guess != number:
     guess = int(input("Try again: "))
     if guess > number:
         print("Guess Higher")
-    if guess < number:
-        print("Guess Lower")
+
 if guess == number:
     time.sleep(2)
     print("You're right! you win! the number was", number, \
          "and it only", tries, "tries")
-time.sleep(6)
+time.sleep(4)
 
-print ('Now that you have beat my very first test, you only need 2 more challenges to beat me ')
+print ('Now that you have beaten my very first test, you only need 2 more challenges to beat me ')
 time.sleep(6)
 print ("What may the next test be? well good question because you'll be playing this... thing I found")
+
+
+
+print('WOW NOT BAD! ')
+time.sleep(2)
+print("I've had this game for so long and I never was able to finish it")
+time.sleep(2)
+print('now that you have finished 2 of my games... I have a riddle for you!')
+time.sleep(2)
+print('Here is the question! Solve this and you may pass!!')
+time.sleep(2)
+
