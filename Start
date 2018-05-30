@@ -1,9 +1,22 @@
 import random
+import time
 
 number = random.randint(1,10)
 tries = 1
 
-uname = input('Hello, What is your username?')
+print('You see a cave that looks erie and, but you see a sign and it says')
+time.sleep(3)
+print('Enter and you may get a chance to get a life time of fortune')
+time.sleep(3)
+
+question = input('DO YOU WANT TO ENTER?! [Y/N]')
+if question == "n":
+    print ('Well you walk by and you encounter a big snake... and ate you... ')
+    time.sleep(3)
+    print ('THE END')
+
+if question == "y":
+    uname = input('Hello, What is your username?')
 print('Hello', uname + '.',)
 
 question = input("Would you like to play a game? [Y/N]")
@@ -11,17 +24,28 @@ if question == "n":
     print ('oh... okay')
 
 if question == "y":
+    time.sleep(2)
     print ("I'm thinking of a number between 1 & 10")
     guess = int(input("Have a guess: "))
-    if guess < number:
+    if guess > number:
+        time.sleep(2)
         print ('Guess Lower...')
-if guess > number:
+if guess < number:
+    time.sleep(2)
     print ("Guess Higher...")
 while guess != number:
     tries += 1
     guess = int(input("Try again: "))
-    if guess < number:
+    if guess > number:
         print("Guess Higher")
+    if guess < number:
+        print("Guess Lower")
 if guess == number:
+    time.sleep(2)
     print("You're right! you win! the number was", number, \
-         "and it only", tries, "tries"
+         "and it only", tries, "tries")
+time.sleep(6)
+
+print ('Now that you have beat my very first test, you only need 2 more challenges to beat me ')
+time.sleep(6)
+print ("What may the next test be? well good question because you'll be playing this... thing I found")
